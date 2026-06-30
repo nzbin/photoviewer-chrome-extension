@@ -1,3 +1,3 @@
 # PhotoViewer
 
-PhotoViewer plugin for Chrome.
+PhotoViewer for Chrome Extension.
