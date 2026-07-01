@@ -24,9 +24,14 @@
     return el.closest('.photoviewer-modal') !== null;
   }
 
+  // Check if element is inside a link
+  function isInLink(el) {
+    return el.closest('a') !== null;
+  }
+
   // Bind dblclick event on images
   document.addEventListener('dblclick', function (e) {
-    if (e.target.tagName === 'IMG' && e.target.src && !isInPhotoViewer(e.target)) {
+    if (e.target.tagName === 'IMG' && e.target.src && !isInPhotoViewer(e.target) && !isInLink(e.target)) {
       e.preventDefault();
       e.stopPropagation();
 
